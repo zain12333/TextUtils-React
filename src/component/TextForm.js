@@ -79,9 +79,8 @@ export default function TextForm(props) {
         </button>
 
         {/* // some Mathmatrice sare involves in this section */}
+        
 
-       
-       
       </div>
       <div className="container   my-3">
         <h1>Your Text Summary</h1>

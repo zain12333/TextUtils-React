@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary ">
-    <div className="container-fluid  navbar-dark bg-dark">
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+    <div className="container-fluid">
     <a className="navbar-brand" href="/">
     <img src="logo192.png" alt="" width="40" height="40" className="d-inline-block align-top" /></a>
   

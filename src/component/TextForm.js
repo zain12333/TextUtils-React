@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
+
 export default function TextForm(props) {
+
   const [text, setText] = useState('Enter Text here');
 
   const handleUppercase = () => {
@@ -37,6 +39,9 @@ export default function TextForm(props) {
     link.click();
     document.body.removeChild(link);
   };
+
+ 
+  
   
 
   return (
@@ -72,6 +77,11 @@ export default function TextForm(props) {
         <button className="btn btn-primary  mx-2" onClick={handleDownloadcase}>
          Download Text
         </button>
+
+        {/* // some Mathmatrice sare involves in this section */}
+
+       
+       
       </div>
       <div className="container   my-3">
         <h1>Your Text Summary</h1>

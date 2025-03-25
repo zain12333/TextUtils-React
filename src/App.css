@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+.hell2{
+  color: black;
+  background: #61dafb;
+  font-size: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

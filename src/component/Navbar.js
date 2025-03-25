@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-    <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+    <div className="container-fluid  navbar-dark bg-dark">
     <a className="navbar-brand" href="/">
     <img src="logo192.png" alt="" width="40" height="40" className="d-inline-block align-top" /></a>
   
@@ -38,7 +38,7 @@ export default function Navbar(props) {
         </ul>
         <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-success" type="submit">Search</button>
+          <button className="btn btn-outline-primary" type="submit">Search</button>
         </form>
       </div>
     </div>

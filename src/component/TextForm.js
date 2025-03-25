@@ -8,8 +8,36 @@ export default function TextForm(props) {
   };
 
   const handlelowercase = () => {
-    setText(text.toLowerCase());  // ✅ Converts text to uppercase
+    setText(text.toLowerCase());  // ✅ Converts text to lowercase
   };
+  const handleclearcase = () => {
+    setText(('')); 
+ // ✅ Converts text to uppercase
+  };
+
+  const handleSentencecase = () => {
+    setText(text.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, match => match.toUpperCase()));
+  };
+  // ✅ Converts text to  copy to Clipboard
+  
+  const handleCopycase = () => {
+    navigator.clipboard.writeText(text)
+      .then(() => alert("Text copied to clipboard!"))
+      .catch(err => console.error("Failed to copy:", err));
+  };
+  // ✅ Converts   Download text 
+
+
+  const handleDownloadcase = () => {
+    const blob = new Blob([text], { type: "text/plain" }); // Create a text file
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "download.txt"; // Set filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
 
   return (
     <>
@@ -28,6 +56,21 @@ export default function TextForm(props) {
         </button>
         <button className="btn btn-primary  mx-2" onClick={handlelowercase}>
           Convert to Lowercase
+        </button>
+        <button className="btn btn-primary  mx-2" onClick={handleclearcase}>
+          Clear the Text
+        </button>
+
+        <button className="btn btn-primary  mx-2" onClick={handleSentencecase}>
+         Check Sentence Text
+        </button>
+
+        <button className="btn btn-primary  mx-2" onClick={handleCopycase}>
+         Copy To Clipboard
+        </button>
+
+        <button className="btn btn-primary  mx-2" onClick={handleDownloadcase}>
+         Download Text
         </button>
       </div>
       <div className="container   my-3">

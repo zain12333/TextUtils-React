@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 export default function TextForm(props) {
 
-  const [text, setText] = useState('Enter Text here');
+  const [text, setText] = useState('');
 
   const handleUppercase = () => {
     setText(text.toUpperCase());  // ✅ Converts text to uppercase
@@ -90,7 +90,7 @@ export default function TextForm(props) {
        <p>{text.trim() ? (0.008 * text.trim().split(/\s+/).length).toFixed(2) : 0} Read one word per min</p>
        {/* // this is used for show the speed of the user can read a text/word per minute */}
        <h2>Preview</h2>
-       <p>{text}</p>
+       <p>{text.length>0?text:"Enter the Text in box to preview here"}</p>
 
 
       </div>

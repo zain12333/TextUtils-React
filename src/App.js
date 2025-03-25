@@ -19,12 +19,19 @@ function App() {
   const showAlert =(message,type) =>{
     setAlert({
       msg :message,
-      type : type
+      type : type,
+    
+
+  })
+  // so this can enable the work on setAlert in 3 second 
+  setTimeout(() => {
+    setAlert(null);
+        
+  }, 3000);
 
 
-    })
+}
 
-  }
 
 
 
@@ -55,7 +62,7 @@ function App() {
   <Alert   alert= {alert}/>
   {/* // is used for Alert  */}
   <div  className="container">
-  <TextForm   heading ="Enter the Text to Analysis" />
+  <TextForm   showAlert={showAlert} heading ="Enter the Text to Analysis" />
   
   </div>
   {/* // is used for About */}

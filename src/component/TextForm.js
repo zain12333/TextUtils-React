@@ -7,10 +7,12 @@ export default function TextForm(props) {
 
   const handleUppercase = () => {
     setText(text.toUpperCase());  // ✅ Converts text to uppercase
+    props.showAlert("Converted to uppercase","Success");
   };
 
   const handlelowercase = () => {
     setText(text.toLowerCase());  // ✅ Converts text to lowercase
+    props.showAlert("Converted to lowercase","Success"); 
   };
   const handleclearcase = () => {
     setText(('')); 

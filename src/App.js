@@ -27,16 +27,10 @@ function App() {
   setTimeout(() => {
     setAlert(null);
         
-  }, 3000);
+  }, 1500);
 
 
 }
-
-
-
-
-
-
 
   const toggleMode =() =>{
     if(mode=='light'){
@@ -53,10 +47,31 @@ function App() {
     }
 
   }
+  // this is used for gray and black ka last there
+
+  // const toggleMode1 =() =>{
+  //   if(mode=='light'){
+  //     setMode('dark');
+  //     document.body.style.backgroundColor ='blue';
+  //     // so th showAlert are used for print message 
+  //     showAlert("Dark Mode have been enabled","Success");
+  //   }
+  //   else{
+  //     setMode('light');
+  //     document.body.style.backgroundColor ='white';
+  //     // so th showAlert are used for print message 
+  //     showAlert("Light Mode have been enabled","Success");
+  //   }
+
+  // }
+  // same is method sy hum another button ko manage kaya gya 
+
+
+
   return (
    <>
 
-  <Navbar aboutText="ABOUT US" mode = {mode}  toggleMode={toggleMode}/>
+  <Navbar aboutText="ABOUT US" mode = {mode}  toggleMode={toggleMode}    />
   {/* // this is write in component folder and his file contain Navbar name (written in content)  and aslo this is used 
   // of props there */}
   <Alert   alert= {alert}/>

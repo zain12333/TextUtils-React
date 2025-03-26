@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+      {/* // this is used for nav bar are white and black */}
     <div className="container-fluid">
     <a className="navbar-brand" href="/">
     <img src="logo192.png" alt="" width="40" height="40" className="d-inline-block align-top" /></a>
@@ -39,6 +40,10 @@ export default function Navbar(props) {
         <div className="form-check form-switch">
   <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
   </div>
+  {/* <div className="form-check form-switch">
+  <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
+  </div> */}
+  
         <form className="d-flex" role="search">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-outline-primary" type="submit">Search</button>

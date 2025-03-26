@@ -16,11 +16,13 @@ export default function TextForm(props) {
   };
   const handleclearcase = () => {
     setText(('')); 
+    props.showAlert("Clear to Text","Success");
  // ✅ Converts text to uppercase
   };
 
   const handleSentencecase = () => {
     setText(text.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, match => match.toUpperCase()));
+    props.showAlert("Converted to Sentence","Success");
   };
   // ✅ Converts text to  copy to Clipboard
   
@@ -28,6 +30,7 @@ export default function TextForm(props) {
     navigator.clipboard.writeText(text)
       .then(() => alert("Text copied to clipboard!"))
       .catch(err => console.error("Failed to copy:", err));
+      props.showAlert("Copy the Text","Success");
   };
   // ✅ Converts   Download text 
 
@@ -40,6 +43,7 @@ export default function TextForm(props) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    props.showAlert("Download Success","Success");
   };
 
  

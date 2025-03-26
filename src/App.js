@@ -1,15 +1,15 @@
 import './App.css';
-import About from './component/About';
+// import About from './component/About';
 import Navbar from './component/Navbar';
 import TextForm from './component/TextForm';
 import { useState } from 'react';
 import Alert from './component/Alert';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// } from "react-router-dom";
 // is used for web page one click and get result move other page 
 
 function App() {
@@ -40,17 +40,20 @@ function App() {
   };
 
   return (
-    <Router>
+    <>
+    {/* // <Router> */}
       <Navbar aboutText="ABOUT US" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container">
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the Text to Analyze" />} />
-        </Routes>
+        {/* <Routes> */}
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="/" element={} /> */}
+          <TextForm showAlert={showAlert} heading="Enter the Text to Analyze" />
+        {/* </Routes> */}
       </div>
-    </Router>
-    // Router used for  one click and move next page 
+    {/* // </Router> */}
+    {/* // Router used for  one click and move next page  */}
+    </>
   );
 }
 

@@ -64,7 +64,6 @@ return (
             id="mybox" 
 
             rows="8"
-            placeholder="Enter The Text here"
             style={{
                 direction: /[\u0600-\u06FF]/.test(text) ? 'rtl' : 'ltr',
                 textAlign: /[\u0600-\u06FF]/.test(text) ? 'right' : 'left'
